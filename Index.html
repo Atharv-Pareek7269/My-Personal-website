@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Personal Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="http://127.0.0.1:5500/Index.html" class="logo">Weird Spiders</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="http://127.0.0.1:5500/signup.html">Register</a></li>
+            <li><a href="http://127.0.0.1:5500/NFT.html">NFT</a></li>
+            
+        </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars" >
+        <img src="moon.png" id="moon" >
+        <img src="mountains_behind.png" id="mountains_behind" >
+        <a href="#sec" id="btn"><span>Explore</span></a>
+        <img src="mountains_front.png" id="mountains_front" > 
+        <div class = wave id=wave1 style="--i:1"></div>
+        <div class = wave id=wave2 style="--i:2"></div>
+        <div class = wave id=wave3 style="--i:3"></div>
+        <div class = wave id=wave4 style="--i:4"></div>
+        
+    </section>
+    <div class="sec" id="sec">
+        <h2>Hi </h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, officiis eveniet. 
+            Fugiat iste aut quisquam, repudiandae repellat numquam natus necessitatibus ratione delectus accusantium. 
+            Et saepe cupiditate nulla dicta beatae odit?. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Repudiandae animi doloribus dicta odio hic ipsum nisi eligendi quidem veritatis.
+             Maiores ut porro ipsam quibusdam nihil qui eaque dignissimos. Delectus, consectetur!<br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, officiis eveniet. 
+             Fugiat iste aut quisquam, repudiandae repellat numquam natus necessitatibus ratione delectus accusantium. 
+             Et saepe cupiditate nulla dicta beatae odit?. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+             Repudiandae animi doloribus dicta odio hic ipsum nisi eligendi quidem veritatis.
+              Maiores ut porro ipsam quibusdam nihil qui eaque dignissimos. Delectus, consectetur!<br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, officiis eveniet. 
+              Fugiat iste aut quisquam, repudiandae repellat numquam natus necessitatibus ratione delectus accusantium. 
+              Et saepe cupiditate nulla dicta beatae odit?. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Repudiandae animi doloribus dicta odio hic ipsum nisi eligendi quidem veritatis.
+               Maiores ut porro ipsam quibusdam nihil qui eaque dignissimos. Delectus, consectetur!Lorem</p>
+    </div>
+    <script>
+        let stars = document.getElementById('stars')
+        let moon = document.getElementById('moon')
+        let mountains_behind = document.getElementById('mountains_behind')
+        let text = document.getElementById('text')
+        let mountains_front = document.getElementById('mountains_front')
+        let header = document.querySelector('header');
+        let wave1 = document.getElementById('wave1');
+        let wave2 = document.getElementById('wave2');
+        let wave3 = document.getElementById('wave3');
+        let wave4 = document.getElementById('wave4');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value*0.25 + 'px';
+            moon.style.top = value*1.25 + 'px';
+            mountains_behind.style.top = value*0.5 + 'px';
+            text.style.marginBottom = value*1.5 + 'px';
+            btn.style.marginBottom = value*3 + 'px';
+            rocks.style.marginBottom = value*1.2 + "px";
+            header.style.top = value*0.5 + 'px';
+            wave1.style.backgroundPositionX = 400 + value*4 + 'px';
+            wave2.style.backgroundPositionX = 300 + value*-4 + 'px';
+            wave3.style.backgroundPositionX = 200 + value*2 + 'px';
+            wave4.style.backgroundPositionX = 100 + value*-2 + 'px';
+        })
+    </script>
+</body>
+</html> 
